@@ -35,6 +35,10 @@ export default function TermsOfService() {
 
         <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">8. 준거법 및 관할법원</h2>
         <p>본 약관 및 서비스 이용과 관련하여 발생하는 분쟁에 대해서는 대한민국 법률이 적용되며, 관련 소송은 서비스 제공자의 주소지를 관할하는 법원을 전속 관할 법원으로 합니다.</p>
+
+        <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">9. 문의</h2>
+        <p>이용약관과 관련한 문의사항은 아래로 연락주세요.</p>
+        <p className="mt-2">이메일: <a href="mailto:tlsfkaus0711@gmail.com" className="text-primary underline">tlsfkaus0711@gmail.com</a></p>
       </div>
     </main>
   )

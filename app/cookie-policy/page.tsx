@@ -44,6 +44,10 @@ export default function CookiePolicy() {
 
         <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">5. 정책 변경 안내</h2>
         <p>본 쿠키 정책은 서비스 변경 또는 관련 법령 개정에 따라 업데이트될 수 있습니다. 중요한 변경이 있을 경우 서비스 내 공지를 통해 안내해 드립니다. 최신 정책은 carpaypro.com/cookie-policy 에서 언제든 확인하실 수 있습니다.</p>
+
+        <h2 className="text-xl font-semibold text-foreground mt-8 mb-4">6. 문의</h2>
+        <p>쿠키 정책과 관련한 문의사항은 아래로 연락주세요.</p>
+        <p className="mt-2">이메일: <a href="mailto:tlsfkaus0711@gmail.com" className="text-primary underline">tlsfkaus0711@gmail.com</a></p>
       </div>
     </main>
   )

@@ -93,7 +93,7 @@ export default function PrivacyPolicy() {
         <p>개인정보 처리에 관한 업무를 총괄하고, 관련 고충을 처리하기 위하여 아래와 같이 개인정보 보호 책임자를 지정하고 있습니다.</p>
         <ul>
           <li><strong>사이트명:</strong> CarPayPro (carpaypro.com)</li>
-          <li><strong>문의 이메일:</strong> admin@carpaypro.com</li>
+          <li><strong>문의 이메일:</strong> <a href="mailto:tlsfkaus0711@gmail.com" className="text-primary underline">tlsfkaus0711@gmail.com</a></li>
         </ul>
         <p>개인정보 침해 관련 신고 및 상담은 아래 기관에 문의하실 수 있습니다.</p>
         <ul>
