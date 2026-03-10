@@ -78,7 +78,7 @@ export function StepCarSelect() {
   if (currentStep !== 1) return null
 
   return (
-    <div className="premium-card border border-border rounded-2xl p-8 animate-fade-in shadow-sm">
+    <div className="premium-card border border-border rounded-2xl p-5 sm:p-8 animate-fade-in shadow-sm">
       <div className="flex items-center gap-3 mb-6">
         <span className="w-7 h-7 rounded-full bg-primary/20 text-primary text-sm font-black flex items-center justify-center">
           1
@@ -169,7 +169,8 @@ export function StepCarSelect() {
             <div>
               <div className="text-lg font-bold">{selectedCar.name}</div>
               <div className="text-sm text-muted-foreground">
-                {selectedCar.price.toLocaleString()}만원 · {selectedCar.fuel} · 보험 {selectedCar.insurance}만원/연 · 세금 {selectedCar.tax}만원/연
+                {selectedCar.price.toLocaleString()}만원 · {selectedCar.fuel}
+                <span className="hidden sm:inline"> · 보험 {selectedCar.insurance}만원/연 · 세금 {selectedCar.tax}만원/연</span>
               </div>
             </div>
           </div>

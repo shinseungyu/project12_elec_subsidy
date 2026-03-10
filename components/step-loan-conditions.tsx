@@ -54,7 +54,7 @@ export function StepLoanConditions() {
   if (currentStep !== 2) return null
 
   return (
-    <div className="premium-card border border-border rounded-2xl p-8 animate-fade-in shadow-sm bg-white">
+    <div className="premium-card border border-border rounded-2xl p-5 sm:p-8 animate-fade-in shadow-sm bg-white">
       <div className="flex items-center gap-3 mb-8">
         <span className="w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-black flex items-center justify-center border border-primary/20">
           2

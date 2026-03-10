@@ -69,10 +69,10 @@ export function ResultsSection() {
   return (
     <div className="space-y-3 animate-fade-in">
       {/* Verdict */}
-      <div className={cn("rounded-2xl p-6 border-2 flex items-start gap-5", colors.bg, colors.border)}>
-        <span className="text-[42px] leading-none flex-shrink-0">{colors.icon}</span>
+      <div className={cn("rounded-2xl p-5 sm:p-6 border-2 flex items-start gap-4", colors.bg, colors.border)}>
+        <span className="text-[32px] sm:text-[42px] leading-none flex-shrink-0">{colors.icon}</span>
         <div>
-          <div className={cn("font-[var(--font-bebas-neue)] text-[36px] tracking-wide mb-1.5", colors.title)}>
+          <div className={cn("font-[var(--font-bebas-neue)] text-[28px] sm:text-[36px] tracking-wide mb-1.5", colors.title)}>
             {verdict.title}
           </div>
           <div className="text-base text-muted-foreground leading-relaxed">{verdict.desc}</div>
@@ -83,37 +83,37 @@ export function ResultsSection() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div className="bg-primary/10 border border-primary/40 rounded-xl p-5">
           <div className="text-xs font-bold tracking-wider text-muted-foreground uppercase mb-2">월 할부 납입금</div>
-          <div className="font-[var(--font-bebas-neue)] text-[34px] text-primary leading-tight">{formatNumber(monthly)}만원</div>
+          <div className="font-[var(--font-bebas-neue)] text-[26px] sm:text-[34px] text-primary leading-tight">{formatNumber(monthly)}만원</div>
           <div className="text-sm text-muted-foreground mt-1.5">총 이자 {formatNumber(totalInterest)}만원</div>
         </div>
         <div className="bg-card border border-border rounded-xl p-5">
           <div className="text-xs font-bold tracking-wider text-muted-foreground uppercase mb-2">월 평균 보험료</div>
-          <div className="font-[var(--font-bebas-neue)] text-[34px] leading-tight">{formatNumber(insurance)}만원</div>
+          <div className="font-[var(--font-bebas-neue)] text-[26px] sm:text-[34px] leading-tight">{formatNumber(insurance)}만원</div>
           <div className="text-sm text-muted-foreground mt-1.5">
             {selectedCar ? `연 ${selectedCar.insurance}만원 기준` : "가격 기반 추정"}
           </div>
         </div>
         <div className="bg-card border border-border rounded-xl p-5">
           <div className="text-xs font-bold tracking-wider text-muted-foreground uppercase mb-2">월 평균 자동차세</div>
-          <div className="font-[var(--font-bebas-neue)] text-[34px] leading-tight">{formatNumber(tax)}만원</div>
+          <div className="font-[var(--font-bebas-neue)] text-[26px] sm:text-[34px] leading-tight">{formatNumber(tax)}만원</div>
           <div className="text-sm text-muted-foreground mt-1.5">
             {selectedCar ? `연 ${selectedCar.tax}만원 기준` : "가격 기반 추정"}
           </div>
         </div>
         <div className="bg-card border border-border rounded-xl p-5">
           <div className="text-xs font-bold tracking-wider text-muted-foreground uppercase mb-2">월 소모품·유지비</div>
-          <div className="font-[var(--font-bebas-neue)] text-[34px] leading-tight">{formatNumber(maintenance)}만원</div>
+          <div className="font-[var(--font-bebas-neue)] text-[26px] sm:text-[34px] leading-tight">{formatNumber(maintenance)}만원</div>
           <div className="text-sm text-muted-foreground mt-1.5">엔진오일·타이어·세차</div>
         </div>
       </div>
 
       {/* Total Row */}
-      <div className="bg-card border-2 border-primary/20 rounded-2xl p-7 flex items-center justify-between shadow-sm">
+      <div className="bg-card border-2 border-primary/20 rounded-2xl p-5 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm">
         <div>
           <div className="text-base font-bold text-foreground">월 총 자동차 지출</div>
           <div className="text-sm text-muted-foreground mt-1">할부 + 보험 + 세금 + 유지비</div>
         </div>
-        <div className="font-[var(--font-bebas-neue)] text-5xl text-primary">{formatNumber(totalExpense)}만원</div>
+        <div className="font-[var(--font-bebas-neue)] text-4xl sm:text-5xl text-primary">{formatNumber(totalExpense)}만원</div>
       </div>
 
       {/* Ratio Card */}
@@ -122,7 +122,7 @@ export function ResultsSection() {
           <span className="text-sm font-bold text-muted-foreground tracking-wide">월 지출 / 월 소득 비율</span>
           <span
             className={cn(
-              "font-[var(--font-bebas-neue)] text-[38px]",
+              "font-[var(--font-bebas-neue)] text-[30px] sm:text-[38px]",
               annualSalary > 0
                 ? ratio < 20
                   ? "text-success"
@@ -185,23 +185,23 @@ export function ResultsSection() {
           </span>
         </button>
         {showAmortization && (
-          <div className="max-h-96 overflow-y-auto">
-            <table className="w-full text-sm">
+          <div className="max-h-96 overflow-y-auto overflow-x-auto">
+            <table className="w-full text-sm min-w-[400px]">
               <thead className="sticky top-0 bg-muted z-10">
                 <tr>
-                  <th className="py-3 px-4 text-left text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                  <th className="py-2.5 px-3 text-left text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     회차
                   </th>
-                  <th className="py-3 px-4 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                  <th className="py-2.5 px-3 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     납입금
                   </th>
-                  <th className="py-3 px-4 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                  <th className="py-2.5 px-3 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     원금
                   </th>
-                  <th className="py-3 px-4 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                  <th className="py-2.5 px-3 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     이자
                   </th>
-                  <th className="py-3 px-4 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
+                  <th className="py-2.5 px-3 text-right text-xs font-bold tracking-wider text-muted-foreground uppercase">
                     잔여원금
                   </th>
                 </tr>
@@ -209,11 +209,11 @@ export function ResultsSection() {
               <tbody>
                 {schedule.map((row) => (
                   <tr key={row.month} className="border-t border-border/50 hover:bg-white/[0.02]">
-                    <td className="py-3 px-4 text-left text-muted-foreground font-semibold">{row.month}회차</td>
-                    <td className="py-3 px-4 text-right font-medium">{formatNumber(row.payment)}만원</td>
-                    <td className="py-3 px-4 text-right">{formatNumber(row.principal)}만원</td>
-                    <td className="py-3 px-4 text-right text-destructive">{formatNumber(row.interest)}만원</td>
-                    <td className="py-3 px-4 text-right text-muted-foreground">{formatNumber(row.balance)}만원</td>
+                    <td className="py-2.5 px-3 text-left text-muted-foreground font-semibold">{row.month}회차</td>
+                    <td className="py-2.5 px-3 text-right font-medium">{formatNumber(row.payment)}만원</td>
+                    <td className="py-2.5 px-3 text-right">{formatNumber(row.principal)}만원</td>
+                    <td className="py-2.5 px-3 text-right text-destructive">{formatNumber(row.interest)}만원</td>
+                    <td className="py-2.5 px-3 text-right text-muted-foreground">{formatNumber(row.balance)}만원</td>
                   </tr>
                 ))}
               </tbody>

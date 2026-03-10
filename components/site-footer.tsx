@@ -30,7 +30,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-primary transition-colors">
+                <Link href="/#faq" className="hover:text-primary transition-colors">
                   자주 묻는 질문 (FAQ)
                 </Link>
               </li>
