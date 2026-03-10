@@ -72,6 +72,11 @@ export const metadata: Metadata = {
     apple: '/Gemini_Generated_Image_uqshuxuqshuxuqsh-_1_.ico',
   },
   // verification: { google: 'YOUR_GOOGLE_VERIFICATION_CODE' },
+  verification: {
+    other: {
+      'naver-site-verification': '55a4be2d62a229995169fc5d2881a4cd327c8c3f',
+    },
+  },
   other: {
     'google-adsense-account': 'ca-pub-5378247298190063',
   },
@@ -118,7 +123,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
           strategy="beforeInteractive"
         />
-        {/* <meta name="naver-site-verification" content="YOUR_NAVER_VERIFICATION_CODE" /> */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063"
