@@ -103,37 +103,6 @@ export default function RootLayout({
     logo: `${siteUrl}/Gemini_Generated_Image_uqshuxuqshuxuqsh-_1_.ico`,
   }
 
-  const jsonLdFaq = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: '선수금(계약금)을 많이 내면 금리도 낮아지나요?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '금리 자체가 낮아지지는 않지만, 대출 원금이 줄어 총 이자 부담은 확연히 줄어듭니다. 선수금 500만 원 추가만으로 총 이자가 30만 원 이상 절감되는 경우도 많습니다.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '신차와 중고차의 할부 금리 차이는 얼마나 되나요?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '신차 캐피탈 기준 연 3~6%, 중고차는 연 7~14%로 크게 높습니다. 가능하다면 은행(1금융권) 자동차 대출(연 4~7%)을 먼저 알아보는 것이 이자 절감에 절대적으로 유리합니다.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: '보험료는 어떻게 계산에 반영되나요?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: '연령과 차량 유형을 입력하면 업계 평균 보험료를 추정해 월 유지비에 자동으로 반영됩니다. 실제 보험료는 운전 경력, 사고 이력에 따라 다를 수 있으므로 참고용으로 활용하세요.',
-        },
-      },
-    ],
-  }
-
   return (
     <html lang="ko">
       <head>
@@ -147,12 +116,6 @@ export default function RootLayout({
           id="json-ld-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrg) }}
-          strategy="beforeInteractive"
-        />
-        <Script
-          id="json-ld-faq"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
           strategy="beforeInteractive"
         />
         {/* <meta name="naver-site-verification" content="YOUR_NAVER_VERIFICATION_CODE" /> */}
