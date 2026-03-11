@@ -20,7 +20,7 @@ export function ProgressBar() {
   }
 
   return (
-    <div className="flex items-center py-7">
+    <div className="flex items-center py-8">
       {steps.map((step, idx) => {
         const isDone = step.num < currentStep || (showResults && step.num <= 3)
         const isActive = step.num === currentStep && !showResults
@@ -30,26 +30,28 @@ export function ProgressBar() {
           <div key={step.num} className="flex items-center flex-1 last:flex-none">
             <div
               className={cn(
-                "flex flex-col items-center cursor-pointer",
-                step.num > currentStep && !showResults && "cursor-default"
+                "flex flex-col items-center",
+                isDone || (showResults && step.num <= 3) ? "cursor-pointer" : "cursor-default"
               )}
               onClick={() => handleClick(step.num)}
             >
+              {/* Circle */}
               <div
                 className={cn(
-                  "w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all",
-                  isDone && "bg-primary border-primary text-primary-foreground",
-                  isActive && "bg-card border-primary text-primary shadow-[0_0_0_4px_rgba(79,125,255,0.15)]",
-                  isResult && "bg-primary border-primary text-primary-foreground",
+                  "w-9 h-9 rounded-full border-2 flex items-center justify-center text-sm font-bold transition-all duration-300",
+                  isDone && "bg-primary border-primary text-white shadow-[0_4px_12px_rgba(0,51,102,0.25)]",
+                  isActive && "bg-card border-primary text-primary shadow-[0_0_0_4px_rgba(0,51,102,0.12)]",
+                  isResult && "bg-primary border-primary text-white shadow-[0_4px_12px_rgba(0,51,102,0.25)]",
                   !isDone && !isActive && !isResult && "bg-secondary border-border text-muted-foreground"
                 )}
               >
-                {step.icon ? "✦" : step.num}
+                {isDone ? "✓" : step.icon ? "★" : step.num}
               </div>
+              {/* Label */}
               <span
                 className={cn(
-                  "text-[10px] font-semibold tracking-wide mt-1.5 text-center",
-                  isDone && "text-muted-foreground",
+                  "text-[10px] font-bold tracking-wide mt-2 whitespace-nowrap",
+                  isDone && "text-primary/70",
                   isActive && "text-primary",
                   isResult && "text-primary",
                   !isDone && !isActive && !isResult && "text-muted-foreground"
@@ -59,10 +61,11 @@ export function ProgressBar() {
               </span>
             </div>
 
+            {/* Connector line */}
             {idx < steps.length - 1 && (
               <div
                 className={cn(
-                  "flex-1 h-0.5 mx-2 -mt-6 transition-colors",
+                  "flex-1 h-[2px] mx-2 -mt-5 rounded-full transition-colors duration-500",
                   isDone ? "bg-primary" : "bg-border"
                 )}
               />

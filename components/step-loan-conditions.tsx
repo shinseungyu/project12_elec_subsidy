@@ -241,7 +241,7 @@ export function StepLoanConditions() {
       <button
         onClick={handleNext}
         disabled={!carPrice || downPayment >= carPrice}
-        className="w-full mt-8 py-5 bg-foreground text-background rounded-2xl font-bold text-xl tracking-tight hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg shadow-foreground/10"
+        className="w-full mt-8 py-[18px] bg-primary text-white rounded-[14px] font-bold text-lg tracking-tight hover:opacity-90 hover:shadow-[0_8px_32px_rgba(0,51,102,0.28)] active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed shadow-lg shadow-primary/20"
       >
         연봉 비교 및 결과 확인
       </button>
@@ -270,7 +270,7 @@ export function Step2Summary() {
       </div>
       <button
         onClick={() => setStep(2)}
-        className="text-xs text-muted-foreground border border-border px-3 py-1.5 rounded-md hover:text-foreground hover:border-muted-foreground transition-colors"
+        className="text-sm text-muted-foreground border border-border px-4 py-2 rounded-lg hover:text-foreground hover:border-muted-foreground transition-colors"
       >
         수정
       </button>

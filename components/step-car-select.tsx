@@ -186,7 +186,7 @@ export function StepCarSelect() {
 
       <button
         onClick={handleNext}
-        className="w-full mt-5 py-5 bg-primary text-primary-foreground rounded-xl font-[var(--font-bebas-neue)] text-2xl tracking-widest hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(130,170,255,0.35)] active:translate-y-0 transition-all flex items-center justify-center gap-2"
+        className="w-full mt-5 py-[18px] bg-primary text-white rounded-[14px] font-bold text-lg tracking-tight hover:opacity-90 hover:shadow-[0_8px_32px_rgba(0,51,102,0.28)] active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
       >
         다음 단계
       </button>
