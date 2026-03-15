@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carelec.kr/sitemap.xml
+
+#DaumWebMasterTool:333de5d303c75813d03ec722e2a098f2756d18e1fbee35531e7078e64820b4f8:VBf3Bb45W0QCfVjqZcfSCQ==
