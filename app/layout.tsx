@@ -156,6 +156,19 @@ export default function RootLayout({
         />
         <Script
           async
+          src="https://www.googletagmanager.com/gtag/js?id=G-QM9ZCPL1MN"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QM9ZCPL1MN');
+          `}
+        </Script>
+        <Script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063"
           crossOrigin="anonymous"
           strategy="afterInteractive"
