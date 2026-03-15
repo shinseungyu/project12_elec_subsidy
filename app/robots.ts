@@ -1,14 +1,10 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://carpaypro.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://carelec.kr';
 
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      disallow: ['/private/'],
-    },
+    rules: { userAgent: '*', allow: '/' },
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

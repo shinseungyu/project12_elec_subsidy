@@ -1,0 +1,14 @@
+[
+{"type":"수소","class":"승용","brand":"현대자동차","model":"넥쏘","subsidy":2250},
+{"type":"수소","class":"승용","brand":"현대자동차","model":"디올뉴넥쏘","subsidy":2250},
+
+{"type":"수소","class":"화물","brand":"현대자동차","model":"엑시언트 수소전기트럭 윙바디","subsidy":25000},
+
+{"type":"수소","class":"승합","brand":"현대자동차","model":"일렉시티 FCEV","subsidy":21000},
+{"type":"수소","class":"승합","brand":"현대자동차","model":"유니버스 수소전기버스","subsidy":26000},
+{"type":"수소","class":"승합","brand":"현대자동차","model":"유니버스 수소전기버스(2026)","subsidy":26000},
+{"type":"수소","class":"승합","brand":"우진산전","model":"아폴로 900 H2 수소전기버스","subsidy":19251},
+
+{"type":"수소","class":"특수","brand":"에이엠특장","model":"에이엠수소10톤암롤트럭","subsidy":72000,"note":"관용"},
+{"type":"수소","class":"특수","brand":"에이엠특장","model":"에이엠수소9.3톤압축식진개차","subsidy":72000,"note":"관용"}
+]

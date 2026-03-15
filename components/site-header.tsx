@@ -1,14 +1,14 @@
 "use client"
 
-import { Car, Menu, X } from "lucide-react"
+import { Zap, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
 const navLinks = [
-  { href: "/", label: "자동차 할부 계산기" },
-  { href: "/car-maintenance-cost", label: "자동차 유지비 계산" },
-  { href: "/used-car-interest", label: "중고차 할부 이자" },
-  { href: "/registration-tax", label: "취등록세/이전비" },
+  { href: "/", label: "전기차 보조금" },
+  { href: "/hydrogen", label: "수소차 보조금" },
+  { href: "/ev-comparison", label: "전기차 비교" },
+  { href: "/board", label: "게시판" },
 ]
 
 export function SiteHeader() {
@@ -18,12 +18,12 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-          <div className="p-1.5 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-            <Car className="h-6 w-6 text-primary" />
+          <div className="p-1.5 bg-emerald-100 rounded-lg group-hover:bg-emerald-200 transition-colors">
+            <Zap className="h-6 w-6 text-emerald-600" />
           </div>
           <div className="flex flex-col -space-y-1">
-            <span className="text-xl font-black tracking-tighter text-foreground uppercase">자동차 할부 계산</span>
-            <span className="text-[10px] font-bold text-primary/70 tracking-tight">CAR LOAN CALCULATOR</span>
+            <span className="text-xl font-black tracking-tighter text-emerald-600">전기차 보조금</span>
+            <span className="text-[10px] font-bold text-emerald-600/70 tracking-tight">EV SUBSIDY CALCULATOR</span>
           </div>
         </Link>
 
@@ -33,16 +33,16 @@ export function SiteHeader() {
             <Link
               key={link.href + link.label}
               href={link.href}
-              className="text-sm font-bold text-muted-foreground hover:text-primary transition-all relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform first:text-foreground"
+              className="text-sm font-bold text-muted-foreground hover:text-emerald-600 transition-all relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-emerald-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="/"
-            className="ml-2 rounded-xl bg-foreground text-background px-5 py-2 text-sm font-bold shadow-lg hover:scale-105 transition-all"
+            className="ml-2 rounded-xl bg-emerald-600 text-white px-5 py-2 text-sm font-bold shadow-lg hover:scale-105 hover:bg-emerald-700 transition-all"
           >
-            분석 시작하기
+            보조금 계산하기
           </Link>
         </nav>
 
@@ -65,7 +65,7 @@ export function SiteHeader() {
                 key={link.href + link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-3 px-4 rounded-xl text-sm font-bold text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                className="py-3 px-4 rounded-xl text-sm font-bold text-foreground hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
               >
                 {link.label}
               </Link>
@@ -73,9 +73,9 @@ export function SiteHeader() {
             <Link
               href="/"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-xl bg-foreground text-background px-5 py-3 text-sm font-bold text-center hover:bg-primary transition-colors"
+              className="mt-3 rounded-xl bg-emerald-600 text-white px-5 py-3 text-sm font-bold text-center hover:bg-emerald-700 transition-colors"
             >
-              분석 시작하기
+              보조금 계산하기
             </Link>
           </nav>
         </div>

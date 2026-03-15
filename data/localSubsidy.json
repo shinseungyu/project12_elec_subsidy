@@ -1,0 +1,106 @@
+{
+  "subsidy_data": [
+    {
+      "region_kr": "서울특별시",
+      "region_en": "Seoul",
+      "ev_subsidy": { "min": 60, "max": 60 },
+      "fcev_subsidy": { "min": 700, "max": 700 }
+    },
+    {
+      "region_kr": "부산광역시",
+      "region_en": "Busan",
+      "ev_subsidy": { "min": 280, "max": 280 },
+      "fcev_subsidy": { "min": 1100, "max": 1100 }
+    },
+    {
+      "region_kr": "대구광역시",
+      "region_en": "Daegu",
+      "ev_subsidy": { "min": 250, "max": 250 },
+      "fcev_subsidy": { "min": 1000, "max": 1000 }
+    },
+    {
+      "region_kr": "인천광역시",
+      "region_en": "Incheon",
+      "ev_subsidy": { "min": 230, "max": 230 },
+      "fcev_subsidy": { "min": 1000, "max": 1000 }
+    },
+    {
+      "region_kr": "광주광역시",
+      "region_en": "Gwangju",
+      "ev_subsidy": { "min": 330, "max": 330 },
+      "fcev_subsidy": { "min": 1000, "max": 1000 }
+    },
+    {
+      "region_kr": "대전광역시",
+      "region_en": "Daejeon",
+      "ev_subsidy": { "min": 250, "max": 250 },
+      "fcev_subsidy": { "min": 1000, "max": 1000 }
+    },
+    {
+      "region_kr": "울산광역시",
+      "region_en": "Ulsan",
+      "ev_subsidy": { "min": 290, "max": 290 },
+      "fcev_subsidy": { "min": 1150, "max": 1150 }
+    },
+    {
+      "region_kr": "세종특별자치시",
+      "region_en": "Sejong",
+      "ev_subsidy": { "min": 200, "max": 200 },
+      "fcev_subsidy": { "min": 997, "max": 997 }
+    },
+    {
+      "region_kr": "경기도",
+      "region_en": "Gyeonggi-do",
+      "ev_subsidy": { "min": 200, "max": 484 },
+      "fcev_subsidy": { "min": 1000, "max": 1250 }
+    },
+    {
+      "region_kr": "강원특별자치도",
+      "region_en": "Gangwon-do",
+      "ev_subsidy": { "min": 288, "max": 288 },
+      "fcev_subsidy": { "min": 1200, "max": 1200 }
+    },
+    {
+      "region_kr": "충청북도",
+      "region_en": "Chungcheongbuk-do",
+      "ev_subsidy": { "min": 580, "max": 649.6 },
+      "fcev_subsidy": { "min": 1100, "max": 1254 }
+    },
+    {
+      "region_kr": "충청남도",
+      "region_en": "Chungcheongnam-do",
+      "ev_subsidy": { "min": 700, "max": 700 },
+      "fcev_subsidy": { "min": 1000, "max": 1500 }
+    },
+    {
+      "region_kr": "전북특별자치도",
+      "region_en": "Jeonbuk-do",
+      "ev_subsidy": { "min": 630, "max": 630 },
+      "fcev_subsidy": { "min": 1200, "max": 1200 }
+    },
+    {
+      "region_kr": "전라남도",
+      "region_en": "Jeollanam-do",
+      "ev_subsidy": { "min": 450, "max": 850 },
+      "fcev_subsidy": { "min": 1200, "max": 1500 }
+    },
+    {
+      "region_kr": "경상북도",
+      "region_en": "Gyeongsangbuk-do",
+      "ev_subsidy": { "min": 600, "max": 1100 },
+      "fcev_subsidy": { "min": 1000, "max": 1000 }
+    },
+    {
+      "region_kr": "경상남도",
+      "region_en": "Gyeongsangnam-do",
+      "ev_subsidy": { "min": 520, "max": 910 },
+      "fcev_subsidy": { "min": 1060, "max": 1250 }
+    },
+    {
+      "region_kr": "제주특별자치도",
+      "region_en": "Jeju",
+      "ev_subsidy": { "min": 400, "max": 400 },
+      "fcev_subsidy": { "min": 0, "max": 0 }
+    }
+  ]
+}
