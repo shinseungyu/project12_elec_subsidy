@@ -27,7 +27,7 @@ const TYPE_ICONS: Record<TypeTab, string> = {
 function fmt(n: number) { return n.toLocaleString("ko-KR") + "만원" }
 function fmtRange(min: number, max: number) {
   if (min === max) return fmt(min)
-  return `${min.toLocaleString()}~${max.toLocaleString()}만원`
+  return `${min.toLocaleString("ko-KR")}~${max.toLocaleString("ko-KR")}만원`
 }
 
 export default function Home() {
@@ -394,8 +394,9 @@ export default function Home() {
         {/* 게시판 */}
         {(() => {
           const PER_PAGE = 5
-          const totalPages = Math.ceil(postsData.length / PER_PAGE)
-          const pageItems = postsData.slice((guidePage - 1) * PER_PAGE, guidePage * PER_PAGE)
+          const sortedPosts = [...postsData].sort((a, b) => b.date.localeCompare(a.date))
+          const totalPages = Math.ceil(sortedPosts.length / PER_PAGE)
+          const pageItems = sortedPosts.slice((guidePage - 1) * PER_PAGE, guidePage * PER_PAGE)
 
           return (
             <section className="mb-16">
