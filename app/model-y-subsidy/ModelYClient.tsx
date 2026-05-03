@@ -139,6 +139,82 @@ export default function ModelYClient() {
           </p>
         </section>
 
+        {/* 모델 YL 출시 섹션 */}
+        <section className="mb-16 animate-fade-in">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest bg-red-500 text-white px-3 py-1 rounded-full">🆕 신규 출시</span>
+            <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">테슬라 모델 YL</p>
+          </div>
+          <h2 className="text-2xl font-bold text-foreground mb-2">모델 YL(롱 휠베이스) 국내 판매 시작</h2>
+          <p className="text-sm text-muted-foreground mb-6">
+            기존 모델 Y보다 실내 거주성과 적재 공간이 개선된 롱 휠베이스 버전이 국내 정식 출시됐습니다.
+            보조금 수령 전 반드시 확인해야 할 핵심 포인트를 정리했습니다.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="premium-card rounded-2xl border border-border p-5">
+              <div className="text-2xl mb-2">📐</div>
+              <p className="font-bold text-foreground mb-1">롱 휠베이스란?</p>
+              <p className="text-sm text-muted-foreground">
+                기존 모델 Y 대비 차체가 길어져 2·3열 거주성 및 적재 공간이 향상된 버전입니다.
+                형식 승인이 별도로 나기 때문에 보조금 단가도 달라집니다.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+              <div className="text-2xl mb-2">⚠️</div>
+              <p className="font-bold text-amber-800 mb-1">보조금 주의사항</p>
+              <p className="text-sm text-amber-700">
+                차량 가격이 <strong>8,500만원 초과</strong> 시 보조금 0원.
+                프리미엄 사양으로 출시될 경우 보조금 50% 미만 구간 진입 가능성이 높습니다.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5">
+              <div className="text-2xl mb-2">🏷️</div>
+              <p className="font-bold text-blue-800 mb-1">변하지 않는 혜택</p>
+              <p className="text-sm text-blue-700">
+                전기차로 분류되므로 <strong>취득세 감면 140만원</strong>은
+                차체 길이와 무관하게 동일하게 적용됩니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="premium-card rounded-2xl border border-border p-6">
+            <h3 className="font-bold text-foreground mb-4">모델 YL 보조금 핵심 체크포인트</h3>
+            <div className="space-y-3">
+              {[
+                {
+                  icon: "💰",
+                  title: "가격 상한제",
+                  desc: "출고가 8,500만원 초과 → 국고보조금 0원. 5,500~8,500만원 구간은 50% 지원. 5,500만원 이하만 전액 지원. 현재 모델 Y 롱레인지가 6,399만원인 점을 감안하면 YL이 프리미엄 사양으로 나올 경우 보조금 삭감 확률 높음.",
+                },
+                {
+                  icon: "🔋",
+                  title: "전비(에너지 효율) 영향",
+                  desc: "차체가 길고 무거워지면 전비가 낮아질 수 있습니다. 환경부는 전비가 낮을수록 국고보조금을 삭감하므로, 기존 모델 Y보다 보조금이 적게 책정될 수 있습니다.",
+                },
+                {
+                  icon: "🏙️",
+                  title: "지자체 물량 선점이 핵심",
+                  desc: "경기도 내 시흥시는 보조금 소진 속도가 빠른 편입니다. 신규 출시 모델은 예약 순번이 밀리면 올해 예산을 놓칠 수 있으니 잔여 대수를 실시간으로 체크하세요.",
+                },
+              ].map(({ icon, title, desc }) => (
+                <div key={title} className="flex gap-3 p-3 rounded-xl bg-muted/40">
+                  <span className="text-xl shrink-0">{icon}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{title}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-center">
+              <p className="text-xs text-emerald-800 font-semibold">
+                📊 시흥시 잔여 보조금 물량은 <strong>무공해차 통합누리집 (ev.or.kr)</strong>에서 실시간 확인하세요
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* 지역별 실구매가 테이블 */}
         <section className="mb-16">
           <p className="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">지역별 비교</p>
