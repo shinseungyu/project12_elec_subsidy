@@ -503,6 +503,73 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 모델Y 주니퍼 롱바디 섹션 */}
+        <section className="mb-16 rounded-3xl border border-border overflow-hidden">
+          <div className="bg-stone-900 px-8 py-6 flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-2xl shrink-0">⚡</div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-1">2026 인기 모델 보조금</p>
+              <h2 className="text-xl font-black text-white">테슬라 모델Y 주니퍼 롱바디 — 국고 210만원</h2>
+            </div>
+          </div>
+          <div className="p-6 md:p-8 space-y-5">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              모델Y 주니퍼 롱레인지(롱바디)는 차량 가격이 <strong className="text-foreground">5,000만원 이상 8,000만원 미만</strong> 구간에 해당해 국고 보조금 50%인 <strong className="text-foreground">210만원</strong>만 지원됩니다. 지자체 보조금을 더하면 최대 270만원대 혜택을 받을 수 있습니다.
+            </p>
+
+            {/* 보조금 카드 */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                { label: "국고 보조금", value: "210만원", sub: "전액의 50% 지원", color: "bg-emerald-50 border-emerald-200 text-emerald-700" },
+                { label: "지자체 보조금", value: "60~500만원", sub: "지역별 상이", color: "bg-blue-50 border-blue-200 text-blue-700" },
+                { label: "총 보조금 (평균)", value: "약 270만원~", sub: "국고 + 지자체 합산", color: "bg-stone-800 border-stone-700 text-white" },
+              ].map((item) => (
+                <div key={item.label} className={`rounded-2xl border px-5 py-4 ${item.color}`}>
+                  <p className="text-xs font-semibold opacity-70 mb-1">{item.label}</p>
+                  <p className="text-2xl font-black mb-0.5">{item.value}</p>
+                  <p className="text-xs opacity-60">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* 지역별 실구매가 */}
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3">지역별 실구매가 (출시가 6,499만원 기준)</p>
+              <div className="rounded-2xl border border-border overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted">
+                    <tr>
+                      <th className="px-4 py-2.5 text-left font-semibold text-foreground">지역</th>
+                      <th className="px-4 py-2.5 text-right font-semibold text-foreground">국고</th>
+                      <th className="px-4 py-2.5 text-right font-semibold text-foreground">지자체</th>
+                      <th className="px-4 py-2.5 text-right font-semibold text-foreground">실구매가</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {[
+                      { region: "서울", local: 200 },
+                      { region: "경기", local: 250 },
+                      { region: "강원", local: 450 },
+                      { region: "전남", local: 500 },
+                    ].map(({ region, local }) => (
+                      <tr key={region} className="hover:bg-muted/40">
+                        <td className="px-4 py-2.5 font-medium text-foreground">{region}</td>
+                        <td className="px-4 py-2.5 text-right text-muted-foreground">210만원</td>
+                        <td className="px-4 py-2.5 text-right text-muted-foreground">{local}만원</td>
+                        <td className="px-4 py-2.5 text-right font-bold text-emerald-600">{(6499 - 210 - local).toLocaleString()}만원</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3">
+              <p className="text-xs text-amber-700">💡 RWD(5,499만원)는 국고 보조금 전액 수령 가능. 롱바디 대비 실구매가 약 1,000만원 이상 저렴할 수 있습니다.</p>
+            </div>
+          </div>
+        </section>
+
         {/* 모델Y 전용 섹션 */}
         <section className="mb-16 rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-8 md:p-10">
           <div className="flex flex-col md:flex-row md:items-center gap-6">
